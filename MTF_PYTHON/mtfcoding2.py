@@ -14,8 +14,8 @@ def encode(inputName):
     templist.append('t')
     templist.append('f')
     outputName = "".join(templist) 
-    f_out = open(outputName, encoding = 'latin-1', mode = "w")
-   # f_out = open('testFile.mtf', encoding = 'latin-1', mode = "w")
+    #f_out = open(outputName, encoding = 'latin-1', mode = "w")
+    f_out = open('testFile.mtf', encoding = 'latin-1', mode = "w")
     
     f_out.write(chr(0xfa))
     f_out.write(chr(0xce))
@@ -72,8 +72,8 @@ def decode(inputName):
     templist.append('x')
     templist.append('t')
     outputName = "".join(templist)
-    f_out = open (outputName, "w")
-   # f_out = open('testFile.txt', "w")
+    #f_out = open (outputName, "w")
+    f_out = open('testFile.txt', "w")
     
     testBytes = f_in.read(4)
     if not(testBytes[0] == chr(0xfa)):
